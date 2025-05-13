@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/components/ui/use-toast";
 import { useStore } from "@/lib/store";
 import { Link } from "react-router-dom";
+import { MarkdownRenderer } from "@/components/shared/MarkdownRenderer";
 
 const AnalysisPage = () => {
   const [dreamContent, setDreamContent] = useState("");
