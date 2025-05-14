@@ -71,9 +71,9 @@ Hãy dành thời gian suy ngẫm về những khía cạnh trong cuộc sống 
   };
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-8 md:py-12 bg-gradient-to-b from-spiritual-dark/5 to-transparent">
       <div className="space-y-4 mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold tracking-tight">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight spiritual-gradient-text">
           Phân tích giấc mơ
         </h1>
         <p className="text-muted-foreground max-w-3xl">
@@ -83,20 +83,20 @@ Hãy dành thời gian suy ngẫm về những khía cạnh trong cuộc sống 
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div>
-          <Card className="p-6">
-            <h2 className="text-xl font-medium mb-4">Mô tả giấc mơ của bạn</h2>
+          <Card className="p-6 spiritual-card">
+            <h2 className="text-xl font-medium mb-4 text-spiritual-wine">Mô tả giấc mơ của bạn</h2>
             <Textarea
               placeholder="Hãy mô tả chi tiết giấc mơ của bạn. Càng nhiều chi tiết, phân tích càng chính xác..."
-              className="min-h-[200px] mb-4"
+              className="min-h-[200px] mb-4 spiritual-input"
               value={dreamContent}
               onChange={(e) => setDreamContent(e.target.value)}
             />
             <div className="flex gap-4">
-              <Button onClick={handleAnalysis} disabled={isAnalyzing} className="flex-1">
+              <Button onClick={handleAnalysis} disabled={isAnalyzing} className="flex-1 spiritual-button">
                 {isAnalyzing ? "Đang phân tích..." : "Phân tích giấc mơ"}
               </Button>
               {analysis && (
-                <Button variant="outline" onClick={handleSaveDream}>
+                <Button variant="outline" onClick={handleSaveDream} className="border-spiritual-sage hover:border-spiritual-lavender">
                   Lưu giấc mơ
                 </Button>
               )}
@@ -106,15 +106,15 @@ Hãy dành thời gian suy ngẫm về những khía cạnh trong cuộc sống 
 
         <div>
           {analysis ? (
-            <Card className="p-6">
-              <h2 className="text-xl font-medium mb-4">Kết quả phân tích</h2>
+            <Card className="p-6 spiritual-card">
+              <h2 className="text-xl font-medium mb-4 text-spiritual-wine">Kết quả phân tích</h2>
               <div className="prose prose-blue max-w-none">
                 <MarkdownRenderer content={analysis} />
               </div>
             </Card>
           ) : (
-            <Card className="p-6 bg-blue-50 border-blue-100">
-              <h2 className="text-xl font-medium mb-4">Hướng dẫn</h2>
+            <Card className="p-6 spiritual-card bg-gradient-to-br from-spiritual-sage/5 to-spiritual-lavender/10">
+              <h2 className="text-xl font-medium mb-4 text-spiritual-wine">Hướng dẫn</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   Để nhận được phân tích chính xác nhất, hãy cung cấp càng nhiều chi tiết càng tốt về giấc mơ của bạn:

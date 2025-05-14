@@ -75,6 +75,14 @@ export default {
 					800: '#065284',
 					900: '#0b446d',
 					950: '#082b4a',
+				},
+				// New spiritual color palette
+				spiritual: {
+					earth: '#C75B2C',    // soft earth orange
+					wine: '#701919',     // deep wine red
+					sage: '#8B9C81',     // sage green
+					lavender: '#C7B1C9', // pastel lavender
+					dark: '#1A1A1A',     // dark matte black
 				}
 			},
 			borderRadius: {
@@ -108,6 +116,11 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'float': 'float 6s ease-in-out infinite'
+			},
+			// Added gradients for spiritual aesthetic
+			backgroundImage: {
+				'spiritual-gradient': 'linear-gradient(to right, #8B9C81, #C7B1C9)',
+				'spiritual-gradient-alt': 'linear-gradient(to bottom, #C75B2C, #701919)',
 			}
 		}
 	},
